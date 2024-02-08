@@ -15,6 +15,8 @@ local function OpenBank()
     end)
 end
 
+exports('OpenBank', OpenBank)
+
 local function OpenATM()
     QBCore.Functions.Progressbar('accessing_atm', Lang:t('progress.atm'), 1500, false, true, {
         disableMovement = false,
