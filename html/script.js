@@ -40,7 +40,9 @@ const bankingApp = Vue.createApp({
     computed: {
         accountStatements() {
             if (this.selectedAccountStatement && this.statements[this.selectedAccountStatement]) {
-                return this.statements[this.selectedAccountStatement];
+                return [...this.statements[this.selectedAccountStatement]].sort((a, b) => {
+                    return b.date - a.date;
+                });
             }
             return [];
         },

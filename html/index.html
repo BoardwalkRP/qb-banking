@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div v-if="activeView === 'home'" class="transactions">
-                        <li v-for="statement in statements[selectedAccountStatement]" :key="statement.id">
+                        <li v-for="statement in accountStatements" :key="statement.id">
                             <span>{{ formatDate(statement.date) }}</span>
                             <span>{{ statement.user }}</span>
                             <span>{{ statement.reason }}</span>
